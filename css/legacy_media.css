@@ -1,6 +1,713 @@
 @import url(./common.css);
 
-@import url(./common.css);
+/* ============================모바일 헤더================================= */
+header{
+    background-image: url(../img/main/mobile-nav-bg.jpg);
+    background-size: cover;
+    width: auto;
+    height: 60px;
+}
+
+.link{display: none;}
+.sns{display: none;}
+
+.mobile-header{
+    background-image: url(../img/main/mobile-nav-bg.jpg);
+    background-size: cover;
+    height: 60px; width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    justify-content: space-between;
+}
+.mobile-header > a{
+    padding-left: 8px;
+}
+.mobile-header > a > img{
+    width: 150px; height: auto;
+    position: relative;
+    top: 2px;
+}
+#buger{
+    width: 55px; height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2px;
+}
+#buger > span{
+    display: block;
+    width: 30px; height: 2px;
+    background-color: #b69451;
+    border-radius: 1px;
+}
+#buger > span:nth-of-type(2){
+    margin: 4px 0;
+}
+
+/* =============================헤더============================ */
+
+main{
+    position: relative;
+    background-image: url(../img/media/bg.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%; height: auto;
+    background-color: #171e1d;
+}
+main svg{
+    width: 2vw;
+    fill: #ffd075;
+}
+.navi::before{
+    content: "";
+    background: linear-gradient(0deg,transparent,#000);
+    height: 20vw;
+    position: absolute;
+    width: 110%;
+    top: 0; left: -30px;
+    z-index: -2;
+}
+.navi{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%; height: 4vw;
+    justify-content: space-between;
+    font-size: 1vw;
+    z-index: 2;
+    background: linear-gradient(0deg,transparent,#000);
+}
+.navi > a{display: none;}
+.nav-left{display: none;}
+.nav-right{display: none;}
+
+.main-bar{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+}
+.main-bar > img{
+    width: 50vw; height: 100%;
+}
+.corner-main{
+    position: absolute;
+    top: 2px;
+    z-index: 3;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+}
+.corner-main > img{
+    width: 22vw;
+}
+/* =============================네비메뉴====================================== */
+
+.media-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+.media-title > img:nth-of-type(1){
+    margin-bottom: 1rem;
+    height: 50px; width: auto;
+}
+.media-title > img:nth-of-type(2){
+    margin-top: 1rem;
+    height: 35px; width: auto;
+}
+
+.video{
+    position: relative;
+    margin: 3rem auto;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+}
+.video-1{
+    margin-bottom: 0.5rem;
+    padding: 0.4%;
+    width: 50%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.video-1 > a > img{
+    border-radius: 2px;
+    left: 5%; top: 7%;
+    width: 90%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.video-1 > a > svg{
+    position: absolute;
+    left: 37%; top: 28%;
+    width: 80px; height: 80px;
+    transition: all .1s;
+    color: #b69451;
+    filter: invert(55%) sepia(47%) saturate(433%) hue-rotate(2deg) brightness(100%) contrast(87%) drop-shadow(0 0 2px black) ;
+}
+.video-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.video-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+.video-1 > figcaption{
+    font-size: .875rem;
+    margin-bottom: .5rem;
+    margin-top: .3rem;
+    text-align: center;
+}
+
+.photo{
+    position: relative;
+    margin: 3rem auto 0;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(180deg,transparent,#000);
+    padding: 0 30px;
+}
+.photo-1{
+    margin-bottom: 1.5rem;
+    padding: 0 0.4% 1.7%;
+    width: 50%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.photo-1 > a > img{
+    border-radius: 2px;
+    left: 5%; top: 8%;
+    width: 90%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.photo-1 > a > svg{
+    position: absolute;
+    width: 32px; height: 32px;
+    filter: drop-shadow(0 0 2px black);
+    left: 45%; top: 45%;
+    transition: transform .25s ease,color 1s;
+}
+.photo-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.photo-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+
+/* =============================미디어====================================== */
+
+footer{
+    background: #000;
+    display: flex;
+    padding-top: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+footer > a{
+    border: 1px solid gray;
+    border-radius: 30px;
+    width: 95px; height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0 70px;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+}
+footer > a > svg{
+    height: 50%; width: 50%;
+}
+.game-logo-1{
+    width: auto; height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.game-logo-1 > svg:nth-of-type(1){
+    height: 75px; width: 54px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > img{
+    height: 26px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(2){
+    height: 60px; width: 80px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(3){
+    height: 29px; width: 84px;
+    margin: 0 28px 30px;
+}
+.game-logo-2{
+    width: 1110; height: 87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transform: scale3d(.7,.7,1);
+}
+@media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
+
+.game-logo-2 > svg:nth-of-type(1){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(2){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(3){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(4){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(5){
+    height: auto; width: 56px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(6){
+    height: 43px; width: 28px;
+    margin: 0 28px 30px;
+}
+.legal-rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.legal{
+    width: 660px;
+    margin: 10px 10px 20px 0;
+}
+.legal-2{
+    display: flex;
+    align-items: center;
+
+}
+.legal-2> svg{
+    width: 30px; height: auto;
+    margin: 0 10px;
+}
+.legal p{
+    font-size: .5625rem;
+    color: gray;
+}
+.legal >p{
+    padding-left: 11px;
+    margin-bottom: 1rem;
+}
+.rating > svg{
+    height: auto;
+    width: 74px;
+}
+
+.clause{
+    height: 20px; width: 370px;
+    font-size: .625rem;
+    font-weight: 400;
+    line-height: 1.4;
+    display: flex;
+    color: gray;
+    opacity: .7;
+    justify-content: space-evenly;
+}
+
+.corner-bottom{
+    position: absolute;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+    bottom: 0;
+}
+.corner-bottom > img{
+    width: 10vw;
+}
+
+
+/* ======================================768====================================== */
+/* ======================================768====================================== */
+
+@media(min-width:768px){
+/* ============================모바일 헤더================================= */
+header{
+    background-image: url(../img/main/mobile-nav-bg.jpg);
+    background-size: cover;
+    width: auto;
+    height: 60px;
+}
+
+.link{display: none;}
+.sns{display: none;}
+
+.mobile-header{
+    background-image: url(../img/main/mobile-nav-bg.jpg);
+    background-size: cover;
+    height: 60px; width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    justify-content: space-between;
+}
+.mobile-header > a{
+    padding-left: 8px;
+}
+.mobile-header > a > img{
+    width: 150px; height: auto;
+    position: relative;
+    top: 2px;
+}
+#buger{
+    width: 55px; height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2px;
+}
+#buger > span{
+    display: block;
+    width: 30px; height: 2px;
+    background-color: #b69451;
+    border-radius: 1px;
+}
+#buger > span:nth-of-type(2){
+    margin: 4px 0;
+}
+
+/* =============================헤더============================ */
+
+main{
+    position: relative;
+    background-image: url(../img/media/bg.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%; height: auto;
+    background-color: #171e1d;
+    padding: 0;
+}
+main svg{
+    width: 2vw;
+    fill: #ffd075;
+}
+.navi::before{
+    content: "";
+    background: linear-gradient(0deg,transparent,#000);
+    height: 10vw; 
+    position: absolute;
+    width: 100%;
+    top: 0; left: 0;
+    z-index: -2;
+}
+.navi{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%; height: 4vw;
+    justify-content: space-between;
+    font-size: 1vw;
+    z-index: 2;
+    background: linear-gradient(0deg,transparent,#000);
+}
+.navi > a{display: none;}
+.nav-left{display: none;}
+.nav-right{display: none;}
+
+.main-bar{display: none;}
+.corner-main{
+    position: absolute;
+    top: 2px; left: 0;
+    z-index: 3;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+}
+.corner-main > img{
+    width: 22vw;
+}
+/* =============================네비메뉴====================================== */
+
+.media-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media-title > img:nth-of-type(1){
+    margin-bottom: 1rem;
+    height: 50px; width: auto;
+}
+.media-title > img:nth-of-type(2){
+    margin-top: 1rem;
+    height: 35px; width: auto;
+}
+
+.video{
+    position: relative;
+    margin: 3rem auto;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.video-1{
+    margin-bottom: 0.5rem;
+    padding: 0.4%;
+    width: 33%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.video-1 > a > img{
+    border-radius: 2px;
+    left: 5%; top: 7%;
+    width: 90%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.video-1 > a > svg{
+    position: absolute;
+    left: 37%; top: 28%;
+    width: 80px; height: 80px;
+    transition: all .1s;
+    color: #b69451;
+    filter: invert(55%) sepia(47%) saturate(433%) hue-rotate(2deg) brightness(100%) contrast(87%) drop-shadow(0 0 2px black) ;
+}
+.video-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.video-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+.video-1 > figcaption{
+    font-size: .875rem;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.photo{
+    position: relative;
+    margin: 3rem auto 0;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(180deg,transparent,#000);
+    
+}
+.photo-1{
+    margin-bottom: 0.5rem;
+    padding: 0 0.4% 1.7%;
+    width: 33%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.photo-1 > a > img{
+    border-radius: 2px;
+    left: 5%; top: 8%;
+    width: 90%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.photo-1 > a > svg{
+    position: absolute;
+    width: 32px; height: 32px;
+    filter: drop-shadow(0 0 2px black);
+    left: 45%; top: 45%;
+    transition: transform .25s ease,color 1s;
+}
+.photo-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.photo-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+
+/* =============================미디어====================================== */
+
+footer{
+    background: #000;
+    display: flex;
+    padding-top: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+footer > a{
+    border: 1px solid gray;
+    border-radius: 30px;
+    width: 95px; height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0 70px;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+}
+footer > a > svg{
+    height: 50%; width: 50%;
+}
+.game-logo-1{
+    width: auto; height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.game-logo-1 > svg:nth-of-type(1){
+    height: 75px; width: 54px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > img{
+    height: 26px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(2){
+    height: 60px; width: 80px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(3){
+    height: 29px; width: 84px;
+    margin: 0 28px 30px;
+}
+.game-logo-2{
+    width: 1110; height: 87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transform: scale3d(.7,.7,1);
+}
+@media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
+
+.game-logo-2 > svg:nth-of-type(1){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(2){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(3){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(4){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(5){
+    height: auto; width: 56px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(6){
+    height: 43px; width: 28px;
+    margin: 0 28px 30px;
+}
+.legal-rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.legal{
+    width: 660px;
+    margin: 10px 10px 20px 0;
+}
+.legal-2{
+    display: flex;
+    align-items: center;
+
+}
+.legal-2> svg{
+    width: 30px; height: auto;
+    margin: 0 10px;
+}
+.legal p{
+    font-size: .5625rem;
+    color: gray;
+}
+.legal >p{
+    padding-left: 11px;
+    margin-bottom: 1rem;
+}
+.rating > svg{
+    height: auto;
+    width: 74px;
+}
+
+.clause{
+    height: 20px; width: 370px;
+    font-size: .625rem;
+    font-weight: 400;
+    line-height: 1.4;
+    display: flex;
+    color: gray;
+    opacity: .7;
+    justify-content: space-evenly;
+}
+
+.corner-bottom{
+    position: absolute;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+    bottom: 0;
+}
+.corner-bottom > img{
+    width: 10vw;
+}
+}
+
+
+/* ======================================992====================================== */
+/* ======================================992====================================== */
+
+@media(min-width:992px){
 
 header{
     width: auto;
@@ -63,6 +770,9 @@ header{
 .sns > p > a:nth-of-type(4) > img:hover{
     filter: invert(79%) sepia(61%) saturate(3499%) hue-rotate(177deg) brightness(112%) contrast(98%);
 }
+.mobile-header{
+    display: none;
+}
 
 /* =============================헤더============================ */
 
@@ -71,9 +781,10 @@ main{
     background-image: url(../img/media/bg.webp);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     width: 100%; height: auto;
-    background-color: #000;
+    background-color: #171e1d;
+    padding: 0;
 }
 main svg{
     width: 2vw;
@@ -85,7 +796,7 @@ main svg{
     height: 15vw;
     position: absolute;
     width: 100%;
-    top: 0;
+    top: 0; left: 0;
     z-index: -2;
 }
 .navi{
@@ -185,7 +896,7 @@ main svg{
 }
 .main-bar{
     position: absolute;
-    top: 94%;
+    top: 94%; left: 0;
     z-index: 3;
     display: flex;
     width: 100%; height: auto;
@@ -196,7 +907,7 @@ main svg{
 }
 .corner-main{
     position: absolute;
-    top: 99%;
+    top: 99%; left: 0;
     z-index: 3;
     display: flex;
     width: 100%; height: auto;
@@ -222,14 +933,229 @@ main svg{
     height: 35px; width: auto;
 }
 
-.vedio{
-    background-image: url(../img/media/frame.png);
+.video{
+    position: relative;
+    margin: 3rem auto;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.video-1{
     margin-bottom: 0.5rem;
     padding: 1.25%;
-    width: calc(33% - 1rem);
-    
+    width: 33%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
-.vedio-1 > a > img{
+.video-1 > a > img{
     border-radius: 2px;
-    width: 12px;
+    left: 7%; top: 10%;
+    width: 86%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.video-1 > a > svg{
+    position: absolute;
+    left: 40%; top: 32%;
+    width: 80px; height: 80px;
+    transition: all .1s;
+    color: #b69451;
+    filter: invert(55%) sepia(47%) saturate(433%) hue-rotate(2deg) brightness(100%) contrast(87%) drop-shadow(0 0 2px black) ;
+}
+.video-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.video-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+.video-1 > figcaption{
+    font-size: .875rem;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.photo{
+    position: relative;
+    margin: 3rem auto 0;
+    display: flex;
+    width: 100%; height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(180deg,transparent,#000);
+}
+.photo-1{
+    margin-bottom: 0.5rem;
+    padding: 1.25%;
+    width: 33%; height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.photo-1 > a > img{
+    border-radius: 2px;
+    left: 7.5%; top: 12%;
+    width: 85%; height: auto;
+    position: absolute;
+    transition: all .2s ease;
+    box-shadow: 0 0 12px 1px rgb(182 148 81 / 50%);
+}
+.photo-1 > a > svg{
+    position: absolute;
+    width: 32px; height: 32px;
+    filter: drop-shadow(0 0 2px black);
+    left: 45%; top: 45%;
+    transition: transform .25s ease,color 1s;
+}
+.photo-1:hover > a > img{
+    box-shadow: 0 0 40px 9px rgba(255, 196, 79, 0.411);
+}
+.photo-1:hover > a > svg{
+    transform: scale(1.2,1.2);
+    filter: drop-shadow(0 0 2px black);
+}
+
+/* =============================미디어====================================== */
+
+footer{
+    background: #000;
+    display: flex;
+    padding-top: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+footer > a{
+    border: 1px solid gray;
+    border-radius: 30px;
+    width: 95px; height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0 70px;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+}
+footer > a > svg{
+    height: 50%; width: 50%;
+}
+.game-logo-1{
+    width: auto; height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.game-logo-1 > svg:nth-of-type(1){
+    height: 75px; width: 54px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > img{
+    height: 26px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(2){
+    height: 60px; width: 80px;
+    margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(3){
+    height: 29px; width: 84px;
+    margin: 0 28px 30px;
+}
+.game-logo-2{
+    width: 1110; height: 87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transform: scale3d(.7,.7,1);
+}
+@media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
+
+.game-logo-2 > svg:nth-of-type(1){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(2){
+    height: 23px; width: 110px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(3){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(4){
+    height: 27px; width: auto;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(5){
+    height: auto; width: 56px;
+    margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(6){
+    height: 43px; width: 28px;
+    margin: 0 28px 30px;
+}
+.legal-rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.legal{
+    width: 380px;
+    margin: 10px 10px 20px 0;
+}
+.legal-2{
+    display: flex;
+    align-items: center;
+
+}
+.legal-2> svg{
+    width: 40px; height: auto;
+    margin: 0 10px;
+}
+.legal p{
+    font-size: .5625rem;
+    color: gray;
+}
+.legal >p{
+    padding-left: 11px;
+    margin-bottom: 1rem;
+}
+.rating > svg{
+    height: auto;
+    width: 74px;
+}
+
+.clause{
+    height: 20px; width: 370px;
+    font-size: .625rem;
+    font-weight: 400;
+    line-height: 1.4;
+    display: flex;
+    color: gray;
+    opacity: .7;
+    justify-content: space-evenly;
+}
+
+.corner-bottom{
+    position: absolute;
+    display: flex;
+    width: 100%; height: auto;
+    justify-content: space-between;
+    bottom: 0;
+}
+.corner-bottom > img{
+    width: 10vw;
+}
 }

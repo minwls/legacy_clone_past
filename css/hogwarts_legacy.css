@@ -396,6 +396,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .legal{
     width: 380px;
@@ -407,7 +408,7 @@ footer{
 
 }
 .legal-2> svg{
-    width: 40px; height: auto;
+    width: 30px; height: auto;
     margin: 0 10px;
 }
 .legal p{
@@ -444,10 +445,6 @@ footer{
 .corner-bottom > img{
     width: 10vw;
 }
-
-
-
-
 
 
 
@@ -921,6 +918,8 @@ footer{
         z-index: -1;
         bottom: -.3vw
     }
+
+    /*=================================풋터============================*/
     footer{
         background: #000;
         display: flex;
