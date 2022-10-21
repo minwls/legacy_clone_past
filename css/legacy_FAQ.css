@@ -252,6 +252,13 @@ main img{
     margin: 20px auto;
 }
 
+.main-top::after{
+    content: "";
+    background: linear-gradient(180deg,transparent,#000);
+    height: 280px; width: 100%;
+    position: absolute;
+    bottom: -2vw; left: 0;
+}
 /*==========================================풋터==================================*/
 footer{
     background: #000;
