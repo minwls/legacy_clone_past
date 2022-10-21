@@ -49,6 +49,110 @@ header{
     margin: 4px 0;
 }
 
+/*============================================모바일메뉴==============================================*/
+
+.mobile-menu{
+    /* position: fixed; */
+    left: 0; top: 0;
+    z-index: 9;
+    background-image: url(../img/main/mobile-menu-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; height: 100%;
+    padding: 6rem 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+    border-image-source: url(https://cdn-hogwartslegacy.warnerbrosgames.com/static/square-border-frame.png);
+    border-image-repeat: stretch stretch;
+    border-image-slice: 44;
+    border-image-width: 20px;
+    border-style: solid;
+    padding: 1rem;
+}
+.mobile-menu > button{
+    background-color: transparent;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.mobile-menu > a > img{
+    margin-right: 50px;
+    margin-bottom: 3rem;
+    width: 260px;
+    
+}
+.mm-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1.75rem;
+    width: 100%;
+}
+.mm-menu > li{
+    font-size: 1.75rem;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    padding-right: 50px;
+    position: relative;
+    text-align: right;
+}
+.mm-menu > li:nth-of-type(5) > a{
+    color: #b69451;
+}
+.mm-menu > li:nth-of-type(7){
+    background-image: url(../img/main/gold-button-bg.jpg);
+    background-size: cover;
+    border-radius: 90px;
+    height: 50px;
+    display: inline-block;
+    padding: 0.5rem 2rem 0.75rem;
+    margin-top: 10px;
+    right: 50px;
+    color: white;
+}
+.mm-menu > p{
+    font-family: serif;
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: .8rem;
+    margin-top: -10px;
+    width: 100%;
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+.mm-bottom{
+    width: 410px; height: 100%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.mobile-sns{
+    display: flex;
+    width: 275px; height: auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.mobile-sns > a > svg{
+    width: 45px; height: 36px;
+}
+.mm-global{
+    width: 122px;
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: space-around;
+}
+.mm-global > a > svg{
+    width: 20px; height: auto;
+    filter: invert(89%) sepia(88%) saturate(659%) hue-rotate(138deg) brightness(305%) contrast(102%);
+}
+
 /* ===============================헤더==================================== */
 .main-main{
     position: relative;
@@ -449,6 +553,7 @@ footer{
 
 
 /* ======================================992====================================== */
+/* ======================================992====================================== */
 
 @media(min-width:992px){
     header{
@@ -513,6 +618,9 @@ footer{
         filter: invert(79%) sepia(61%) saturate(3499%) hue-rotate(177deg) brightness(112%) contrast(98%);
     }
     .mobile-header{
+        display: none;
+    }
+    .mobile-menu{
         display: none;
     }
 

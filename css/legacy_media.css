@@ -153,8 +153,8 @@ main svg{
 }
 .video-1 > a > svg{
     position: absolute;
-    left: 37%; top: 28%;
-    width: 80px; height: 80px;
+    left: 42%; top: 33%;
+    width: 50px; height: 50px;
     transition: all .1s;
     color: #b69451;
     filter: invert(55%) sepia(47%) saturate(433%) hue-rotate(2deg) brightness(100%) contrast(87%) drop-shadow(0 0 2px black) ;
@@ -813,9 +813,11 @@ main svg{
 .navi > a{
     position: absolute;
     left: 41%; top: 5%;
+    display: block;
 }
 .navi > a > img{
     width: 18vw; height: auto;
+    
 
 }
 .navi span{
