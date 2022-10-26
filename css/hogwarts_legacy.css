@@ -51,8 +51,11 @@ header{
 
 /*============================================모바일메뉴==============================================*/
 
+.mobile-menu.active{
+    display: block;
+}
 .mobile-menu{
-    /* position: fixed; */
+    position: fixed;
     left: 0; top: 0;
     z-index: 9;
     background-image: url(../img/main/mobile-menu-bg.jpg);
@@ -65,6 +68,7 @@ header{
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    display: none;
     
     border-image-source: url(https://cdn-hogwartslegacy.warnerbrosgames.com/static/square-border-frame.png);
     border-image-repeat: stretch stretch;
@@ -76,15 +80,18 @@ header{
 .mobile-menu > button{
     background-color: transparent;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    border: 0;
+    filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
+    right: 1.5rem;
+    top: 1.7rem;
 }
 
 .mobile-menu > a > img{
     margin-right: 50px;
-    margin-bottom: 3rem;
+    margin-top: 6.7rem;
+    margin-bottom: 4rem;
+    position: relative;
     width: 260px;
-    
 }
 .mm-menu{
     display: flex;
@@ -94,7 +101,7 @@ header{
     width: 100%;
 }
 .mm-menu > li{
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     line-height: 1.1;
     margin: 0 0 1rem;
     padding-right: 50px;
@@ -110,8 +117,8 @@ header{
     border-radius: 90px;
     height: 50px;
     display: inline-block;
-    padding: 0.5rem 2rem 0.75rem;
-    margin-top: 10px;
+    padding: 0.7rem 2rem 0.75rem;
+    margin-top: 12px;
     right: 50px;
     color: white;
 }
@@ -135,12 +142,12 @@ header{
 }
 .mobile-sns{
     display: flex;
-    width: 275px; height: auto;
+    width: 200px; height: auto;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 .mobile-sns > a > svg{
-    width: 45px; height: 36px;
+    width: 30px; height: 30px;
 }
 .mm-global{
     width: 122px;
@@ -186,7 +193,7 @@ header{
     justify-content: space-between;
 }
 .main-bar > img{
-    width: 50vw; height: 100%;
+    width: 50%; height: 100%;
 }
 .corner-main{
     position: absolute;
@@ -202,7 +209,7 @@ header{
 .mobile-play > img{
     width: 140px; height: 140px;
     position: absolute;
-    top: 38%; left: 40%;
+    top: 35%; left: 40%;
     transition: transform .4s cubic-bezier(.48,0,.48,1);
     filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.7));
 }
@@ -244,7 +251,7 @@ header{
 }
 .bottom-main::before{
     content: "";
-    height: 100px; width: 110%;
+    height: 100px; width: 100%;
     position: absolute;
     left: -30px; top: -5px;
     display: inline-block;
@@ -289,7 +296,7 @@ header{
     align-items: center;
 }
 .card-01{
-    width: 65%;
+    width: 90%;
     padding: 1.5rem;
 }
 .card-01 > div{
@@ -348,18 +355,18 @@ header{
     text-align: center;
 }
 .bottom-rule > img{
-    width: 500px; height: auto;
+    width: 70vw; height: auto;
     margin: 0 0 3rem;
 }
 .bottom-rule > img:nth-of-type(2){
-    height: 63%;
+    height: 22vw;
     top: 10%;
     opacity: .2;
     position: absolute;
     z-index: 1;
 }
 .bottom-sns{
-    width: 500px; height: auto;
+    width: 70vw; height: auto;
     position: relative;
     z-index: 2;
     display: flex;
@@ -367,7 +374,7 @@ header{
     top: -15%;
 }
 .bottom-sns > a > svg{
-    height: 130%; width: 130%;
+    height: 110%; width: 110%;
     transition: filter .3s,transform 1.5s cubic-bezier(.68,-.55,.265,1.55)
 }
 .bottom-sns > a > svg > path{
@@ -423,10 +430,10 @@ header{
     content: "";
     background: linear-gradient(180deg,transparent,#000);
     height: 280px;
-    width: 109%;
+    width: 100%;
     position: absolute;
     z-index: -1;
-    bottom: -5vw
+    bottom: -5vw;
 }
 footer{
     background: #000;
@@ -443,6 +450,7 @@ footer{
     align-items: center;
     justify-content: center;
     align-self: center;
+    flex-wrap: wrap;
 }
 .game-logo-1 > svg:nth-of-type(1){
     height: 75px; width: 54px;
