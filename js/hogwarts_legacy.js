@@ -58,3 +58,27 @@ function scroll(){
 }
 
 window.addEventListener('load', scroll)
+
+
+const play = document.querySelector('.play')
+const mobilePlay = document.querySelector('.mobile-play')
+const videoPlay = document.querySelector('.iframe-video')
+const videoxx = document.querySelector('.iframe-video > button')
+
+
+play.addEventListener("click",function(){
+   videoPlay.classList.add('active');
+});
+mobilePlay.addEventListener("click",function(){
+   videoPlay.classList.add('active');
+});
+
+videoxx.addEventListener("click",function(){
+   videoPlay.classList.add('off');
+   setTimeout(()=>{
+      videoPlay.classList.remove('active');
+      videoPlay.classList.remove('off');
+   },600)
+});
+
+

@@ -247,6 +247,7 @@ footer > a > svg{
     align-items: center;
     justify-content: center;
     align-self: center;
+    flex-wrap: wrap;
 }
 .game-logo-1 > svg:nth-of-type(1){
     height: 75px; width: 54px;
@@ -307,7 +308,7 @@ footer > a > svg{
     flex-direction: column;
 }
 .legal{
-    width: 660px;
+    width: 380px;
     margin: 10px 10px 20px 0;
 }
 .legal-2{
@@ -655,7 +656,7 @@ footer > a > svg{
     flex-direction: column;
 }
 .legal{
-    width: 660px;
+    width: 380px;
     margin: 10px 10px 20px 0;
 }
 .legal-2{
@@ -1112,9 +1113,10 @@ footer > a > svg{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 .legal{
-    width: 380px;
+    width: 400px;
     margin: 10px 10px 20px 0;
 }
 .legal-2{

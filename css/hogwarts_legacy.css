@@ -64,6 +64,11 @@ header{
     0%{transform: scale(1.2); opacity: 0;}
     100%{transform: scale(1); opacity: 1;}
 }
+@keyframes m-menu2{
+    0%{transform: scale(1); opacity: 1; }
+    100%{transform: scale(1.2); opacity: 0;}
+}
+
 .mobile-menu{
     position: fixed;
     left: 0; top: 0;
@@ -88,10 +93,7 @@ header{
     padding: 1rem;
 
 }
-@keyframes m-menu2{
-    0%{transform: scale(1); opacity: 1; }
-    100%{transform: scale(1.2); opacity: 0;}
-}
+
 
 .mobile-menu > button{
     background-color: transparent;
@@ -261,6 +263,57 @@ header{
     transform: scale(1.05, 1.05);
 }
 
+.iframe-video.active{
+    display: flex;
+    justify-content: center;
+    animation: i-video .5s forwards;
+}
+.iframe-video.off{
+    animation: i-video2 .5s forwards;
+}
+@keyframes i-video{
+    0%{transform: scale(1.2); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+}
+@keyframes i-video2{
+    0%{transform: scale(1); opacity: 1; }
+    100%{transform: scale(1.2); opacity: 0;}
+}
+.iframe-video{
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.8);
+    z-index: 10;
+    display: none;
+}
+.iframe-video > iframe{
+    width: 90vw; height: 60vw;
+    padding: 3rem;
+    background-color: #000;
+    z-index: 10;
+    box-shadow: 0 0 40px 9px rgba(248, 167, 6, 0.411);
+    border-radius: 1%;
+}
+.iframe-video > button{
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    right: 2rem;
+    top: 35%;
+    z-index: 11;
+    filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
+}
+.iframe-video > button:hover > svg{
+    transform: scale(.8);
+    transition: .3s;
+}
+
+
 .navi{display: none;}
 /* ===============================네비메뉴================================== */
 
@@ -410,7 +463,7 @@ header{
     100%{opacity: 1; transform: translateY(0);}
 }
 
-
+/*==========================================풋터=======================================*/
 .bottom-rule{
     display: flex;
     position: relative;
@@ -510,7 +563,7 @@ footer{
     position: relative;
 }
 .game-logo-1{
-    width: auto; height: 105px;
+    width: auto; height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -576,7 +629,7 @@ footer{
     flex-direction: column;
 }
 .legal{
-    width: 380px;
+    width: 80vw;
     margin: 10px 10px 20px 0;
 }
 .legal-2{
@@ -602,7 +655,7 @@ footer{
 }
 
 .clause{
-    height: 20px; width: 370px;
+    height: 20px; width: 100vw;
     font-size: .625rem;
     font-weight: 400;
     line-height: 1.4;
@@ -896,6 +949,7 @@ footer{
     }
     .play > img{
         width: 20%; height: 35%;
+        cursor: pointer;
         position: absolute;
         top: 35%; left: 40%;
         transition: transform .4s cubic-bezier(.48,0,.48,1);
@@ -919,6 +973,59 @@ footer{
     .play:hover > img:nth-of-type(5){
         transform: scale(1.1, 1.1);
     }
+
+    .iframe-video.active{
+        display: flex;
+        justify-content: center;
+        animation: i-video .5s forwards;
+    }
+    .iframe-video.off{
+        animation: i-video2 .5s forwards;
+    }
+    @keyframes i-video{
+        0%{transform: scale(1.2); opacity: 0;}
+        100%{transform: scale(1); opacity: 1;}
+    }
+    @keyframes i-video2{
+        0%{transform: scale(1); opacity: 1; }
+        100%{transform: scale(1.2); opacity: 0;}
+    }
+    .iframe-video{
+        position: fixed;
+        width: 100%; height: 100%;
+        top: 0; left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0,0,0,.8);
+        z-index: 10;
+        display: none;
+    }
+    .iframe-video > iframe{
+        width: 90vw; height: 50vw;
+        padding: 3rem;
+        background-color: #000;
+        z-index: 10;
+        box-shadow: 0 0 40px 9px rgba(248, 167, 6, 0.411);
+        border-radius: 1%;
+    }
+    .iframe-video > button{
+        position: absolute;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        right: 2rem;
+        top: 6.5rem;
+        z-index: 11;
+        filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
+    }
+    .iframe-video > button:hover > svg{
+        transform: scale(.8);
+        transition: .3s;
+    }
+
+/*===================================영상======================================*/
+
 
     .bottom-main::before{display: none;}
     .copy{
@@ -1175,9 +1282,10 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: row;
     }
     .legal{
-        width: 380px;
+        width: 400px;
         margin: 10px 10px 20px 0;
     }
     .legal-2{
