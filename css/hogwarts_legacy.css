@@ -108,6 +108,7 @@ header{
     transform: scale(.8);
     transition: .3s;
 }
+
 .mobile-menu > a {
     width: auto; height: auto;
     margin-top: 6.7rem;
@@ -236,7 +237,8 @@ header{
 .mobile-play{
     position: absolute;
     width: 140px; height: 140px;
-    top: 37%; left: 35%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
 .mobile-play > img{
     width: 100%; height: 100%;
@@ -247,7 +249,7 @@ header{
 .mobile-play > img:nth-of-type(5){
     width: 30%; height: auto;
     margin-left: 7px;
-    top: 35%; left: 34%;
+    top: 35%; left: 32%;
 }
 .mobile-play > img:nth-of-type(1){
     opacity: 0;
@@ -290,7 +292,11 @@ header{
     z-index: 10;
     display: none;
 }
-.iframe-video > iframe{
+.iframe-video div{
+    width: 90vw; height: 60vw;
+    position: relative;
+}
+.iframe-video iframe{
     width: 90vw; height: 60vw;
     padding: 3rem;
     background-color: #000;
@@ -298,17 +304,17 @@ header{
     box-shadow: 0 0 40px 9px rgba(248, 167, 6, 0.411);
     border-radius: 1%;
 }
-.iframe-video > button{
+.iframe-video button{
     position: absolute;
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    right: 2rem;
-    top: 35%;
+    right: 1%;
+    top: 2%;
     z-index: 11;
     filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
 }
-.iframe-video > button:hover > svg{
+.iframe-video button:hover > svg{
     transform: scale(.8);
     transition: .3s;
 }
@@ -333,11 +339,19 @@ header{
 }
 .bottom-main::before{
     content: "";
-    height: 100px; width: 100%;
+    height: 100px; width: 100vw;
     position: absolute;
     left: -30px; top: -5px;
     display: inline-block;
     background: linear-gradient(0deg,rgba(23,30,29,0),#171e1d);
+}
+
+.copy.active{
+    animation: copyani .7s forwards;
+}
+@keyframes copyani{
+    0%{opacity: 0%; transform: scale(1);}
+    100%{opacity: 1;}
 }
 
 .copy{
@@ -346,6 +360,7 @@ header{
     margin: 0 auto;
     max-width: 880px;
     position: relative;
+    opacity: 0;
 }
 .sub-logo{
     margin-top: 1rem;
@@ -405,10 +420,7 @@ header{
 .card-01.active > div > img:nth-of-type(1){
     animation: logo-ani 1s .3s forwards;
 }
-@keyframes logo-ani{
-    0%{opacity: 0%; transform: scale(0.8);}
-    100%{opacity: 1;}
-}
+
 
 .card-01 > div > img:nth-of-type(2){
     clip-path: polygon(0 25%,0 75%,50% 100%,100% 75%,100% 25%,50% 0); 
@@ -548,10 +560,10 @@ header{
     content: "";
     background: linear-gradient(180deg,transparent,#000);
     height: 280px;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     z-index: -1;
-    bottom: -5vw;
+    bottom: -8%;
 }
 footer{
     background: #000;
@@ -569,6 +581,7 @@ footer{
     justify-content: center;
     align-self: center;
     flex-wrap: wrap;
+    max-width: 100vw;
 }
 .game-logo-1 > svg:nth-of-type(1){
     height: 75px; width: 54px;
@@ -581,6 +594,7 @@ footer{
 .game-logo-1 > svg:nth-of-type(2){
     height: 60px; width: 80px;
     margin: 0 28px 30px;
+    max-width: 100%;
 }
 .game-logo-1 > svg:nth-of-type(3){
     height: 29px; width: 84px;
@@ -595,6 +609,7 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     transform: scale3d(.7,.7,1);
+    max-width: 100vw;
 }
 @media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
 
@@ -676,6 +691,14 @@ footer{
     width: 10vw;
 }
 
+/* ===============================모바일 메뉴====================================== */
+/* ===============================모바일 메뉴====================================== */
+
+@media(max-width:480px){
+    .mm-menu li{
+        font-size: 1.2rem;
+    }
+}
 
 
 /* ======================================992====================================== */
@@ -1001,7 +1024,11 @@ footer{
         z-index: 10;
         display: none;
     }
-    .iframe-video > iframe{
+    .iframe-video div{
+        width: 90vw; height: 50vw;
+        position: relative;
+    }
+    .iframe-video iframe{
         width: 90vw; height: 50vw;
         padding: 3rem;
         background-color: #000;
@@ -1009,17 +1036,17 @@ footer{
         box-shadow: 0 0 40px 9px rgba(248, 167, 6, 0.411);
         border-radius: 1%;
     }
-    .iframe-video > button{
+    .iframe-video button{
         position: absolute;
         background-color: transparent;
         border: 0;
         cursor: pointer;
-        right: 2rem;
-        top: 6.5rem;
+        right: 1%;
+        top: 2%;
         z-index: 11;
         filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
     }
-    .iframe-video > button:hover > svg{
+    .iframe-video button:hover > svg{
         transform: scale(.8);
         transition: .3s;
     }
@@ -1028,6 +1055,13 @@ footer{
 
 
     .bottom-main::before{display: none;}
+    .copy.active{
+        animation: copyani .7s forwards;
+    }
+    @keyframes copyani{
+        0%{opacity: 0%; transform: scale(1);}
+        100%{opacity: 1;}
+    }
     .copy{
         font-size: 1.125rem;
         line-height: 1.3;
@@ -1333,3 +1367,12 @@ footer{
     }
 
 }
+
+
+
+
+
+
+
+
+
