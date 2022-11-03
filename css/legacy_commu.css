@@ -1,0 +1,1057 @@
+@import url(./common.css);
+
+
+/* =============================헤더============================ */
+header{
+   width: auto;
+   height: 60px;
+   background-image: url(../img/main/header-bg.jpg);
+   display: flex;
+   justify-content: space-between;
+}
+.link{ display: none; }
+.sns{ display: none; }
+
+
+.mobile-header{
+   background-image: url(../img/main/mobile-nav-bg.jpg);
+   background-size: cover;
+   height: 60px; width: 100%;
+   display: flex;
+   position: fixed;
+   z-index: 4;
+   justify-content: space-between;
+}
+.mobile-header > a{
+   padding-left: 8px;
+}
+.mobile-header > a > img{
+   width: 150px; height: auto;
+   position: relative;
+   top: 2px;
+}
+#buger{
+   width: 55px; height: 52px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   margin-top: 2px;
+}
+#buger > span{
+   display: block;
+   width: 30px; height: 2px;
+   background-color: #b69451;
+   border-radius: 1px;
+}
+#buger > span:nth-of-type(2){
+   margin: 4px 0;
+}
+
+/*============================================모바일메뉴==============================================*/
+
+
+.mobile-menu.active{
+   display: block;
+   animation: m-menu .5s forwards;
+}
+.mobile-menu.off{
+   animation: m-menu2 .5s forwards;
+}
+
+@keyframes m-menu{
+   0%{transform: scale(1.2); opacity: 0;}
+   100%{transform: scale(1); opacity: 1;}
+}
+@keyframes m-menu2{
+   0%{transform: scale(1); opacity: 1; }
+   100%{transform: scale(1.2); opacity: 0;}
+}
+
+.mobile-menu{
+   position: fixed;
+   left: 0; top: 0;
+   z-index: 9;
+   background-image: url(../img/main/mobile-menu-bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%; height: 100%;
+   padding: 6rem 0;
+   width: 100%; height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   display: none;
+   
+   border-image-source: url(https://cdn-hogwartslegacy.warnerbrosgames.com/static/square-border-frame.png);
+   border-image-repeat: stretch stretch;
+   border-image-slice: 44;
+   border-image-width: 20px;
+   border-style: solid;
+   padding: 1rem;
+}
+
+.mobile-menu > button{
+   background-color: transparent;
+   position: absolute;
+   border: 0;
+   filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
+   right: 1.5rem;
+   top: 1.7rem;
+   cursor: pointer;
+}
+.mobile-menu > button:hover > svg{
+   transform: scale(.8);
+   transition: .3s;
+}
+
+.mobile-menu > a {
+   width: auto; height: auto;
+   margin-top: 6.7rem;
+   margin-bottom: 4rem;
+   margin-right: 50px;
+   position: relative;
+   display: flex;
+   justify-content: flex-end;
+}
+.mobile-menu > a > img{
+   width: 260px;
+}
+.mm-menu{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   margin-bottom: 1.75rem;
+   width: 100%;
+}
+.mm-menu > li{
+   font-size: 1.4rem;
+   line-height: 1.1;
+   margin: 0 0 1rem;
+   padding-right: 50px;
+   position: relative;
+   text-align: right;
+}
+.mm-menu > li:nth-of-type(5) > a{
+   color: #b69451;
+}
+.mm-menu > li:nth-of-type(7){
+   background-image: url(../img/main/gold-button-bg.jpg);
+   background-size: cover;
+   border-radius: 90px;
+   height: 50px;
+   display: inline-block;
+   padding: 0.7rem 2rem 0.75rem;
+   margin-top: 12px;
+   right: 50px;
+   color: white;
+}
+.mm-menu > p{
+   font-family: serif;
+   font-weight: 400;
+   line-height: 1.1;
+   font-size: .8rem;
+   margin-top: -10px;
+   width: 100%;
+   text-align: right;
+   margin-right: 50px;
+   margin-bottom: 20px;
+}
+.mm-bottom{
+   height: 100%;
+   margin-right: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+.mobile-sns{
+   display: flex;
+   width: 200px; height: auto;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+.mobile-sns > a > svg{
+   width: 30px; height: 30px;
+}
+.mm-global{
+   width: 122px;
+   display: flex;
+   font-size: 1.25rem;
+   justify-content: space-around;
+}
+.mm-global > a > svg{
+   width: 20px; height: auto;
+   filter: invert(89%) sepia(88%) saturate(659%) hue-rotate(138deg) brightness(305%) contrast(102%);
+}
+
+/* =============================헤더============================ */
+
+/* =============================네비메뉴====================================== */
+
+main{
+   position: relative;
+   background-image: url(../img/commu/blue-star-bg.webp);
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: top;
+   width: 100%; height: auto;
+   background-color: #171e1d;
+   background-size: cover;
+}
+main svg{
+   width: 2vw;
+   fill: #ffd075;
+}
+.navi::before{
+   content: "";
+   background: linear-gradient(0deg,transparent,#000);
+   height: 15vw;
+   position: absolute;
+   width: 100%;
+   top: 0; left: 0;
+   z-index: -2;
+}
+.navi{
+   display: flex;
+   text-align: center;
+   align-items: center;
+   position: relative;
+   width: 100%; height: 4vw;
+   justify-content: space-between;
+   font-size: 1vw;
+   z-index: 2;
+   background: linear-gradient(0deg,transparent,#000);
+}
+.navi > a{ display: none;}
+.nav-left{display: none;}
+.nav-right{display: none;}
+
+
+.main-bar{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+}
+.main-bar > img{
+   width: 50%; height: 100%;
+}
+.corner-main{
+   position: absolute;
+   top: 2px;
+   z-index: 3;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+}
+.corner-main > img{
+   width: 22vw;
+}
+
+/* =============================네비메뉴====================================== */
+
+/* =============================내용================================== */
+.media-title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 15%;
+   margin-bottom: 2rem;
+   font-family: serif;
+   text-align: center;
+}
+.media-title > img:nth-of-type(1){
+   margin-bottom: 1rem;
+   height: 50px; width: auto;
+}
+.media-title > img:nth-of-type(2){
+   margin-top: 1rem;
+   height: 35px; width: auto;
+}
+
+
+.swiper-button-next:after{ display: none; }
+.swiper-button-prev:after{ display: none; }
+
+.slide-main{
+   margin-bottom: 4vw;
+   width: auto; height: auto;
+   position: relative;
+}
+.slider{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.slider > button{
+   background-color: transparent;
+   border: transparent;
+   font-size: 60px;
+   cursor: pointer;
+   color: #fff;
+}
+.slider > button:nth-of-type(1){ display: none; }
+.slider > button:nth-of-type(2){ display: none; }
+
+.slider > div{
+   margin: 0 auto;
+   width: 90vw; height: 55vw;
+   padding: 1rem;
+   overflow: hidden;
+
+   border-image-source: url(../img/commu/square-border-frame.png);
+   border-image-repeat: stretch stretch;
+   border-image-slice: 44;
+   border-image-width: 20px;
+   border-style: solid;
+}
+.slider > div >div{
+   width:100%; height:100%;
+   overflow: hidden;;
+}
+.slider > div figure{
+   width:100%;
+   display: flex;
+}
+.slider > div figure img{
+   width: 100%;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal span{
+   background-color: white;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+   position: relative;
+   margin-top: 10px;
+   z-index: 2;
+}
+
+
+.main-bottom{
+   display: flex;
+   margin: 0 auto;
+   max-width: 90vw;
+   align-items: stretch;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.main-bottom div{
+   height: 20vw; width: 90vw;
+   margin: 0 1vw 5vw;
+   text-align: center;
+   position: relative;
+   background: url(../img/commu/rule-a.png) no-repeat left top;
+   background-size: contain;
+}
+.main-bottom div p{
+   margin-bottom: 1.5vw;
+   margin-top: 8vw;
+   font-size: 1.2rem;
+}
+
+.down > a{
+   background-image: url(../img/commu/smokey-blue-button-bg.jpg);
+   background-size: cover;
+   border-radius: 100px;
+
+   padding: 1.2vw 2vw;
+   width: 120px; height: 35px;
+   margin-bottom: 2vw;
+   margin-top: 1vw;
+   cursor: pointer;
+   display: inline-block;
+}
+.down > a > span{
+   margin-left: 0.5rem;
+   height: 1rem;
+   font-size: .75rem;
+}
+.down > a > svg{
+   width: auto; height: 1rem;
+}
+.discord > svg{
+   width: 13%;
+   max-width: 80px;
+   cursor: pointer;
+   filter: invert(55%) sepia(98%) saturate(236%) hue-rotate(2deg) brightness(92%) contrast(83%);
+}
+.discord > svg:hover{
+   filter: none;
+}
+.snstalk > span{
+   display: flex;
+   align-items: center;
+   width: 100%; height: 40%;
+   justify-content: space-evenly;
+}
+.snstalk > span img{
+   width: 6vw; height: auto;
+   max-width: 45px;
+   filter: invert(100%) sepia(75%) saturate(342%) hue-rotate(274deg) brightness(109%) contrast(102%);
+}
+.snstalk > span img:hover{
+   filter: invert(55%) sepia(98%) saturate(236%) hue-rotate(2deg) brightness(120%) contrast(83%);
+}
+
+
+/*==========================================풋터==================================*/
+footer{
+   background: #000;
+   display: flex;
+   padding-top: 150px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   position: relative;
+   z-index: -1;
+}
+footer > a{
+   border: 1px solid gray;
+   border-radius: 30px;
+   width: 95px; height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin: 0px 0 70px;
+   text-align: center;
+   font-size: 11px;
+   padding: 5px;
+}
+footer > a > svg{
+   height: 50%; width: 50%;
+}
+.game-logo-1{
+   width: auto; height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   flex-wrap: wrap;
+   max-width: 100vw;
+}
+.game-logo-1 > svg:nth-of-type(1){
+   height: 75px; width: 54px;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > img{
+   height: 26px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(2){
+   height: 60px; width: 80px;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(3){
+   height: 29px; width: 84px;
+   margin: 0 28px 30px;
+}
+.game-logo-2{
+   width: 1110; height: 87;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   transform: scale3d(.7,.7,1);
+}
+@media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
+
+.game-logo-2 > svg:nth-of-type(1){
+   height: 23px; width: 110px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(2){
+   height: 23px; width: 110px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(3){
+   height: 27px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(4){
+   height: 27px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(5){
+   height: auto; width: 56px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(6){
+   height: 43px; width: 28px;
+   margin: 0 28px 30px;
+}
+.legal-rating{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.legal{
+   width: 380px;
+   margin: 10px 10px 20px 0;
+}
+.legal-2{
+   display: flex;
+   align-items: center;
+
+}
+.legal-2> svg{
+   width: 40px; height: auto;
+   margin: 0 10px;
+}
+.legal p{
+   font-size: .5625rem;
+   color: gray;
+}
+.legal >p{
+   padding-left: 11px;
+   margin-bottom: 1rem;
+}
+.rating > svg{
+   height: auto;
+   width: 74px;
+}
+
+.clause{
+   height: 20px; width: 370px;
+   font-size: .625rem;
+   font-weight: 400;
+   line-height: 1.4;
+   display: flex;
+   color: gray;
+   opacity: .7;
+   justify-content: space-evenly;
+}
+
+.corner-bottom{
+   position: absolute;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+   bottom: 0;
+}
+.corner-bottom > img{
+   width: 10vw;
+}
+
+
+/* ======================================992====================================== */
+/* ======================================992====================================== */
+
+@media(min-width:992px){
+
+/* =============================헤더============================ */
+header{
+   width: auto;
+   height: 40px;
+   background-image: url(../img/main/header-bg.jpg);
+   display: flex;
+   justify-content: space-between;
+}
+
+.link{
+   display: flex;
+   align-items: center;
+   width: 154px;
+   padding-left: 5px;
+   justify-content: space-between;
+}
+.link a:nth-of-type(1){
+   padding: 0, 6px;
+}
+.link img{
+   width: 20px;
+   margin-left: 5px;
+}
+.link a:nth-of-type(2){
+   width: 58px;
+   height: 14px;
+   display: flex;
+   align-items: center;
+   font-size: .6875rem;
+
+}
+.link a:nth-of-type(2) svg{
+   width: 20px;
+   padding-right: 5px;
+}
+
+.sns{
+   display: flex;
+   align-items: center;
+   font-size: .6875rem;
+   width: 550px;
+   height: 36px;
+   justify-content: space-between;
+   text-align: center;
+}
+.sns img{
+   width: 35px;
+   padding: 4px 8px;
+   filter: invert(74%) sepia(5%) saturate(836%) hue-rotate(358deg) brightness(93%) contrast(85%);
+}
+.sns img:hover{
+   filter: invert(73%) sepia(83%) saturate(253%) hue-rotate(351deg) brightness(98%) contrast(101%);
+}
+.sns > p > a:nth-of-type(2) > img:hover{
+   filter: invert(10%) sepia(99%) saturate(7460%) hue-rotate(3deg) brightness(94%) contrast(118%);
+}
+.sns > p > a:nth-of-type(3) > img:hover{
+   filter: invert(31%) sepia(93%) saturate(1183%) hue-rotate(183deg) brightness(91%) contrast(90%);
+}
+.sns > p > a:nth-of-type(4) > img:hover{
+   filter: invert(79%) sepia(61%) saturate(3499%) hue-rotate(177deg) brightness(112%) contrast(98%);
+}
+.mobile-header{display: none;}
+.mobile-menu{display: none;}
+
+/* =============================헤더============================ */
+
+/* =============================네비메뉴====================================== */
+
+main{
+   position: relative;
+   background-image: url(../img/commu/blue-star-bg.webp);
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: top;
+   width: 100%; height: auto;
+   background-color: #171e1d;
+   background-size: cover;
+}
+main svg{
+   width: 2vw;
+   fill: #ffd075;
+}
+.navi::before{
+   content: "";
+   background: linear-gradient(0deg,transparent,#000);
+   height: 15vw;
+   position: absolute;
+   width: 100%;
+   top: 0; left: 0;
+   z-index: -2;
+}
+.navi{
+   display: flex;
+   text-align: center;
+   align-items: center;
+   position: relative;
+   width: 100%; height: 4vw;
+   justify-content: space-between;
+   font-size: 1vw;
+   z-index: 2;
+   background: linear-gradient(0deg,transparent,#000);
+}
+.navi > a{
+   position: absolute;
+   left: 41%; top: 5%;
+   display: block;
+   z-index: 10;
+}
+.navi > a > img{
+   width: 18vw; height: auto;
+   
+
+}
+.navi span{
+   display: inline-block;
+}
+.navi a:hover span{
+   transform: scale(1.1,1.1);
+   transition: .5s;
+   color: #ffd075;
+}
+
+.nav-left{
+   width: 35%; height: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+}
+.nav-left svg{vertical-align: middle;}
+.nav-left::before{
+   background: url(../img/main/nav-bar-bg-left.png);
+   background-size: cover;
+   width: 100%; height: 100%;
+   content: "";
+   position: absolute;
+   z-index: -1;
+   opacity: .3;
+}
+.nav-left::after{
+   width: 100%; height: 100%;
+   content: "";
+   position: absolute;
+   z-index: -2;
+   background:linear-gradient(90deg,rgba(23,47,73,.5),rgba(23,47,73,.5) 58%,rgba(23,47,73,0));
+}
+
+.nav-right{
+   width: 37%; height: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+}
+.nav-right > a:nth-of-type(2){
+   text-shadow: 0 0 34px #ffd075, 0 0 14px #ffd075;
+   display: flex;
+   flex-direction: column;
+}
+.nav-right > a:nth-of-type(2) > div > span{
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #ffd075;
+   color: #ffd075;
+   text-shadow: 0 0 34px #ffd075, 0 0 14px #ffd075;
+}
+#little{
+   position: absolute;
+   font-size: .7vw;
+   left: 62%;
+   bottom: 0.35vw;
+   white-space: nowrap;
+   width: 35%;
+   overflow: hidden;
+}
+.nav-right svg{vertical-align: middle;}
+.nav-right::before{
+   background: url(../img/main/nav-bar-bg-right.png);
+   background-size: cover;
+   width: 100%; height: 100%;
+   content: "";
+   position: absolute;
+   z-index: -1;
+   opacity: .3;
+}
+.nav-right::after{
+   width: 100%; height: 100%;
+   content: "";
+   position: absolute;
+   z-index: -2;
+   background:linear-gradient(90deg,rgba(23,47,73,.1),rgba(23,47,73,.1) 58%,rgba(23,47,73,0));
+}
+.main-bar{
+   position: absolute;
+   top: 94%; left: 0px;
+   z-index: 3;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+   
+}
+.main-bar > img{
+   width: 30vw; height: 100%;
+   margin: 0;
+}
+.corner-main{
+   position: absolute;
+   top: 99%; left: 0;
+   z-index: 3;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+}
+.corner-main > img{
+   width: 10vw;
+   margin: 0;
+}
+
+/* =============================네비메뉴====================================== */
+
+/* =============================내용================================== */
+.media-title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 5%;
+   margin-bottom: 2rem;
+   font-family: serif;
+}
+.media-title > img:nth-of-type(1){
+   margin-bottom: 1rem;
+   height: 50px; width: auto;
+}
+.media-title > img:nth-of-type(2){
+   margin-top: 1rem;
+   height: 35px; width: auto;
+}
+
+
+.swiper-button-next:after{
+   display: none;
+}
+.swiper-button-prev:after{
+   display: none;
+}
+
+.slide-main{
+   margin-bottom: 4vw;
+   width: auto; height: auto;
+   position: relative;
+}
+.slider{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.slider > button{
+   background-color: transparent;
+   border: transparent;
+   font-size: 60px;
+   cursor: pointer;
+   color: #fff;
+}
+.slider > button:nth-of-type(1){
+   display: block;
+   position: relative;
+   left: 15vw;
+}
+.slider > button:nth-of-type(2){
+   display: block;
+   position: relative;
+   right: 15vw;
+}
+.slider > div{
+   margin: 0 auto;
+   width: 52vw; height: 30vw;
+   padding: 1rem;
+   overflow: hidden;
+
+   border-image-source: url(../img/commu/square-border-frame.png);
+   border-image-repeat: stretch stretch;
+   border-image-slice: 44;
+   border-image-width: 20px;
+   border-style: solid;
+}
+.slider > div >div{
+   width:100%; height:100%;
+   overflow: hidden;;
+}
+.slider > div figure{
+   width:100%;
+   display: flex;
+}
+.slider > div figure img{
+   width: 100%;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal span{
+   background-color: white;
+}
+
+
+.main-bottom{
+   display: flex;
+   margin: 0 auto;
+   max-width: 90vw;
+   align-items: stretch;
+   flex-direction: row;
+   flex-wrap: nowrap;
+}
+.main-bottom div{
+   height: 12vw; width: 30vw;
+   margin: 0 1vw;
+   text-align: center;
+   position: relative;
+   background: url(../img/commu/rule-a.png) no-repeat left top, url(../img/commu/rule-a.png) no-repeat left bottom;
+   background-size: contain;
+   
+}
+.main-bottom div p{
+   margin-bottom: 1.5vw;
+   margin-top: 3vw;
+   font-size: 1.5vw;
+}
+.down > a{
+   background-image: url(../img/commu/smokey-blue-button-bg.jpg);
+   background-size: cover;
+   border-radius: 100px;
+   padding: 0.5vw 1%;
+   width: 30%; height: 20%;
+   margin-bottom: 1vw;
+   cursor: pointer;
+   margin-top: 0;
+}
+
+.down > a > span{
+   margin-left: 0.5rem;
+   height: 1em;
+   font-size: .9vw;
+}
+.down > a > svg{
+   width: auto; height: 15px;
+}
+.discord > svg{
+   width: 13%;
+   cursor: pointer;
+   filter: invert(55%) sepia(98%) saturate(236%) hue-rotate(2deg) brightness(92%) contrast(83%);
+}
+.discord > svg:hover{
+   filter: none;
+}
+.snstalk > span{
+   display: flex;
+   align-items: center;
+   width: 100%; height: auto;
+   justify-content: space-evenly;
+}
+.snstalk > span img{
+   width: 2vw; height: auto;
+   filter: invert(100%) sepia(75%) saturate(342%) hue-rotate(274deg) brightness(109%) contrast(102%);
+}
+.snstalk > span img:hover{
+   filter: invert(55%) sepia(98%) saturate(236%) hue-rotate(2deg) brightness(120%) contrast(83%);
+}
+
+
+/*==========================================풋터==================================*/
+footer{
+   background: #000;
+   display: flex;
+   padding-top: 150px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   position: relative;
+   z-index: -1;
+}
+footer > a{
+   border: 1px solid gray;
+   border-radius: 30px;
+   width: 95px; height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin: 0px 0 70px;
+   text-align: center;
+   font-size: 11px;
+   padding: 5px;
+}
+footer > a > svg{
+   height: 50%; width: 50%;
+}
+.game-logo-1{
+   width: auto; height: 105px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+}
+.game-logo-1 > svg:nth-of-type(1){
+   height: 75px; width: 54px;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > img{
+   height: 26px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(2){
+   height: 60px; width: 80px;
+   margin: 0 28px 30px;
+}
+.game-logo-1 > svg:nth-of-type(3){
+   height: 29px; width: 84px;
+   margin: 0 28px 30px;
+}
+.game-logo-2{
+   width: 1110; height: 87;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   transform: scale3d(.7,.7,1);
+}
+@media(min-width: 1200px){footer > div:nth-of-type(2){width: 930; height: 160;}}
+
+.game-logo-2 > svg:nth-of-type(1){
+   height: 23px; width: 110px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(2){
+   height: 23px; width: 110px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(3){
+   height: 27px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(4){
+   height: 27px; width: auto;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(5){
+   height: auto; width: 56px;
+   margin: 0 28px 30px;
+}
+.game-logo-2 > svg:nth-of-type(6){
+   height: 43px; width: 28px;
+   margin: 0 28px 30px;
+}
+.legal-rating{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.legal{
+   width: 380px;
+   margin: 10px 10px 20px 0;
+}
+.legal-2{
+   display: flex;
+   align-items: center;
+
+}
+.legal-2> svg{
+   width: 40px; height: auto;
+   margin: 0 10px;
+}
+.legal p{
+   font-size: .5625rem;
+   color: gray;
+}
+.legal >p{
+   padding-left: 11px;
+   margin-bottom: 1rem;
+}
+.rating > svg{
+   height: auto;
+   width: 74px;
+}
+
+.clause{
+   height: 20px; width: 370px;
+   font-size: .625rem;
+   font-weight: 400;
+   line-height: 1.4;
+   display: flex;
+   color: gray;
+   opacity: .7;
+   justify-content: space-evenly;
+}
+
+.corner-bottom{
+   position: absolute;
+   display: flex;
+   width: 100%; height: auto;
+   justify-content: space-between;
+   bottom: 0;
+}
+.corner-bottom > img{
+   width: 10vw;
+}
+
+/*==========================================풋터==================================*/
+
+}

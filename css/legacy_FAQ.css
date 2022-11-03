@@ -255,6 +255,7 @@ header{
         flex-direction: column;
         align-items: center;
         margin-top: 5%;
+        font-family: serif;
     }
     .media-title > img:nth-of-type(1){
         margin-bottom: 1rem;
@@ -665,6 +666,7 @@ main svg{
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
+    font-family: serif;
 }
 .media-title > img:nth-of-type(1){
     margin-bottom: 1rem;

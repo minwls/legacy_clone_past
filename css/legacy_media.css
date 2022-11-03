@@ -305,6 +305,7 @@ main svg{
     flex-direction: column;
     align-items: center;
     margin-top: 10%;
+    font-family: serif;
 }
 .media-title > img:nth-of-type(1){
     margin-bottom: 1rem;
@@ -921,6 +922,7 @@ main svg{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: serif;
 }
 .media-title > img:nth-of-type(1){
     margin-bottom: 1rem;
@@ -1402,6 +1404,7 @@ main svg{
     position: absolute;
     left: 41%; top: 5%;
     display: block;
+    z-index: 10;
 }
 .navi > a > img{
     width: 18vw; height: auto;
@@ -1515,6 +1518,7 @@ main svg{
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
+    font-family: serif;
 }
 .media-title > img:nth-of-type(1){
     margin-bottom: 1rem;
