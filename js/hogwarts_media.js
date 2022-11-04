@@ -22,7 +22,7 @@ const videoCut = document.querySelector('.videoCut');
 let datav = ['_hq5pqrqxzo','FruFtmWG8Mk','V2dKDP1-vaw','zDL6kkIaiwU'];
 let tagv = '';
 
-tagv = `<div><iframe width="1100vw" height="600vw" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+tagv = `<div><iframe width="90vw" height="70vw" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <button><svg data-v-5892d8bc="" aria-hidden="true" focusable="false" width="32" height="32" data-prefix="fal" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-xmark"><path data-v-5892d8bc="" fill="currentColor" d="M315.3 411.3c-6.253 6.253-16.37 6.253-22.63 0L160 278.6l-132.7 132.7c-6.253 6.253-16.37 6.253-22.63 0c-6.253-6.253-6.253-16.37 0-22.63L137.4 256L4.69 123.3c-6.253-6.253-6.253-16.37 0-22.63c6.253-6.253 16.37-6.253 22.63 0L160 233.4l132.7-132.7c6.253-6.253 16.37-6.253 22.63 0c6.253 6.253 6.253 16.37 0 22.63L182.6 256l132.7 132.7C321.6 394.9 321.6 405.1 315.3 411.3z"></path></svg></button></div>`
 
 videoCut.innerHTML = tagv;

@@ -285,7 +285,7 @@ main svg{
     justify-content: space-between;
 }
 .main-bar > img{
-    width: 50vw; height: 100%;
+    width: 50%; height: 100%;
 }
 .corner-main{
     position: absolute;
@@ -1619,9 +1619,10 @@ main svg{
 .videoCut div{
     width: 90vw; height: 60vw;
     position: relative;
+    top: 5%; left: 5%;
 }
 .videoCut iframe{
-    width: 90vw; height: 60vw;
+    width: 85%; height: 90%;
     padding: 3rem;
     background-color: #000;
     z-index: 10;
@@ -1633,7 +1634,7 @@ main svg{
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    right: 1%;
+    right: 15%;
     top: 2%;
     z-index: 11;
     filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
@@ -1727,9 +1728,10 @@ main svg{
 .photoCut figure{
     width: 90vw; height: 60vw;
     position: relative;
+    top: 5%
 }
 .photoCut img{
-    width: 90vw; height: 60vw;
+    width: 95%; height: 90%;
     padding: 3rem;
     background-color: #000;
     z-index: 10;
@@ -1741,7 +1743,7 @@ main svg{
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    right: 1%;
+    right: 5%;
     top: 2%;
     z-index: 11;
     filter: invert(57%) sepia(52%) saturate(396%) hue-rotate(2deg) brightness(110%) contrast(87%);
